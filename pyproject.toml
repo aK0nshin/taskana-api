@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "taskana-api"
+version = "0.1.0"
+description = ""
+authors = ["Alexander Konshin <kon2work@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.68.1"
+uvicorn = {extras = ["standard"], version = "^0.15.0"}
+databases = {extras = ["postgresql"], version = "^0.5.2"}
+fastapi-users = {extras = ["sqlalchemy"], version = "^7.0.0"}
+sqlmodel = "^0.0.4"
+asyncpg = "^0.24.0"
+greenlet = "^1.1.1"
+alembic = "^1.7.3"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
