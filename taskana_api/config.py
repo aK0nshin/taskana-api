@@ -1,6 +1,6 @@
 import logging
 
-from pydantic import BaseSettings
+from pydantic import BaseSettings, SecretStr
 from pydantic import validator
 
 
@@ -10,6 +10,7 @@ class Settings(BaseSettings):
     LOG_LEVEL: str
     API_V1_STR: str = '/api/v1'
     DB_URL: str
+    SECRET: SecretStr
 
     @validator('LOG_LEVEL')
     def log_level_validator(cls, log_level): # noqa
